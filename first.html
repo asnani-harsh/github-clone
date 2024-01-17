@@ -1,0 +1,74 @@
+<html>
+
+<head>
+    <title>Github Repositories</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        .container {
+            margin-top: 20px;
+        }
+        
+        .loader {
+            border: 5px solid #f3f3f3;
+            border-radius: 50%;
+            border-top: 5px solid #3498db;
+            width: 30px;
+            height: 30px;
+            animation: spin 2s linear infinite;
+        }
+        
+        @keyframes spin {
+            0% {
+                transform: rotate(0deg);
+            }
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+        
+        .topic {
+            display: inline-block;
+            background-color: #f1f8ff;
+            border: 1px solid #0366d6;
+            border-radius: 20px;
+            font-size: 12px;
+            padding: 2px 5px;
+            margin: 2px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container mt-5">
+        <div class="row mb-4">
+            <div class="col-md-3 text-center">
+                <img src="" id="profileImage" alt="" class="rounded-circle" width=150 height=150>
+            </div>
+            <div class="col-md-9">
+                <h2 id='username'>John Doe</h2>
+                <p id='bio'>Bio goes here</p>
+            </div>
+        </div>
+
+        <!-- Loader -->
+        <div id='loader' style='display: none;'>
+            <div class="loader"></div>
+        </div>
+
+        <!-- Search Bar -->
+        <div class="form-group">
+            <input type="text" class="form-control" id="searchInput" placeholder="Search repositories...">
+        </div>
+        <div id='repos'></div>
+
+
+        <div id='pagination'></div>
+
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="./script.js"></script>
+</body>
+
+</html>
